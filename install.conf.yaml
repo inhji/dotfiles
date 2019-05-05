@@ -1,3 +1,14 @@
-- clean: []
-- link: {}
-- shell: []
+- link:
+    ~/.zshrc:
+        force: true
+        path: config/zshrc
+    ~/.gitconfig:
+        force: true
+        path: config/git/gitconfig
+    ~/.gitignore:
+        force: true
+        path: config/git/gitignore
+
+- shell:
+    - [sudo apt install zsh build-essential -y, Installing base packages]
+    - [git submodule update --init --recursive, Updating submodules]

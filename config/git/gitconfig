@@ -1,0 +1,6 @@
+[user]
+  name = Inhji
+  email = johnnie@posteo.de
+  username = inhji
+[core]
+  excludesfile = ~/.gitignore
