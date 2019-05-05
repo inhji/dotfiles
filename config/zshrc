@@ -21,6 +21,10 @@ else
   export EDITOR='atom'
 fi
 
+if [[ -d $HOME/.cargo ]]; then
+  source $HOME/.cargo/env
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 alias r="source ~/.zshrc"
