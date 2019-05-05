@@ -8,6 +8,11 @@
     ~/.gitignore:
         force: true
         path: config/git/gitignore
+    ~/.atom/:
+        glob: true
+        path: config/atom/*
+        relink: true
+        force: true
 
 - shell:
     - [sudo apt install zsh build-essential -y, Installing base packages]
