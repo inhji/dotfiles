@@ -1,6 +1,7 @@
 # Path to your oh-my-zsh configuration.
 export ZSH=$HOME/.dotfiles/oh-my-zsh
 export DOTFILES=$HOME/.dotfiles
+export PATH=$HOME/.local/bin:$PATH
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -32,3 +33,4 @@ alias up="sudo apt update"
 alias i="sudo apt install"
 alias trz="trezor-agent"
 alias gs="git status"
+alias phx="iex -S mix phx.server"

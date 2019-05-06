@@ -13,7 +13,10 @@
         path: config/atom/*
         relink: true
         force: true
+    ~/.ssh/config:
+        path: config/ssh/config
+        force: true
 
 - shell:
-    - [sudo apt install zsh build-essential -y, Installing base packages]
+    - [sudo apt install zsh build-essential inotify-tools -y, Installing base packages]
     - [git submodule update --init --recursive, Updating submodules]

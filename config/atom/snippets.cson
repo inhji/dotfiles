@@ -1,0 +1,7 @@
+'.text.html.elixir':
+  'Template':
+    'prefix': 't'
+    'body': '<%= $1 %>'
+  'End Template':
+    'prefix': 'end'
+    'body': '<% end %>'
