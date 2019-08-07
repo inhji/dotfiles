@@ -1,7 +1,17 @@
 .dotfiles
 =================
 
-This is a template repository for bootstrapping your dotfiles with [Dotbot][dotbot].
+How to install
+-----------------
+
+```bash
+git clone https://git.inhji.de/inhji/dotfiles.git .dotfiles
+~/.dotfiles/install
+chsh -s /usr/bin/zsh
+```
+
+Tips
+-----------------
 
 In general, you should be using symbolic links for everything, and using git
 submodules whenever possible.
