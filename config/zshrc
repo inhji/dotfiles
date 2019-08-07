@@ -1,21 +1,6 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.dotfiles/oh-my-zsh
 export DOTFILES=$HOME/.dotfiles
-export PATH=$HOME/.local/bin:$PATH
-export NVM_DIR=$HOME/.dotfiles/nvm
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bureau"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(z nvm)
+export PATH=$HOME/.local/bin:$HOME/.mix/escripts:/usr/local/go/bin:$PATH
 
 if [[ -n $SSH_CONNECTION ]]; then
   export EDITOR='vim'
@@ -27,9 +12,12 @@ if [[ -d $HOME/.cargo ]]; then
   source $HOME/.cargo/env
 fi
 
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use  # This loads nvm
+autoload -U promptinit; promptinit
 
-source $ZSH/oh-my-zsh.sh
+# optionally define some options
+PURE_CMD_MAX_EXEC_TIME=10
+
+prompt pure
 
 alias r="source ~/.zshrc"
 alias up="sudo apt update"
@@ -37,3 +25,5 @@ alias i="sudo apt install"
 alias trz="trezor-agent"
 alias gs="git status"
 alias phx="iex -S mix phx.server"
+
+alias tunnel="trz -v root@tunnel.inhji.de -- ssh -R 1337:localhost:4000 root@tunnel.inhji.de"
