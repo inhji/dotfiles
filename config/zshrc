@@ -19,6 +19,9 @@ PURE_CMD_MAX_EXEC_TIME=10
 
 prompt pure
 
+# Load z
+. $DOTFILES/z/z.sh
+
 alias r="source ~/.zshrc"
 alias up="sudo apt update"
 alias i="sudo apt install"
