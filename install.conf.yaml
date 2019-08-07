@@ -16,6 +16,12 @@
     ~/.ssh/config:
         path: config/ssh/config
         force: true
+    ~/.zfunctions/prompt_pure_setup:
+        path: pure/pure.zsh
+        force: true
+    ~/.zfunctions/async:
+        path: pure/async.zsh
+        force: true
 
 - shell:
     - [sudo apt install zsh build-essential inotify-tools -y, Installing base packages]
