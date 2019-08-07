@@ -24,5 +24,6 @@
         force: true
 
 - shell:
-    - [sudo apt install zsh build-essential inotify-tools -y, Installing base packages]
+    - [sudo apt install zsh -y, Installing base packages]
     - [git submodule update --init --recursive, Updating submodules]
+    - [mkdir $HOME/.functions, Creating zfunctions directory]

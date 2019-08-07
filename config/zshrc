@@ -12,6 +12,8 @@ if [[ -d $HOME/.cargo ]]; then
   source $HOME/.cargo/env
 fi
 
+fpath=("$HOME/.zfunctions" $fpath)
+
 autoload -U promptinit; promptinit
 
 # optionally define some options
