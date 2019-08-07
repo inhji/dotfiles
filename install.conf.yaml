@@ -1,3 +1,9 @@
+- shell:
+    - [sudo apt install zsh -y, Installing base packages]
+    - [git submodule update --init --recursive, Updating submodules]
+    - [mkdir -p $HOME/.zfunctions, Creating zfunctions directory]
+    - [mkdir -p $HOME/.ssh, Creating SSH directory]
+
 - link:
     ~/.zshrc:
         force: true
@@ -22,8 +28,3 @@
     ~/.zfunctions/async:
         path: pure/async.zsh
         force: true
-
-- shell:
-    - [sudo apt install zsh -y, Installing base packages]
-    - [git submodule update --init --recursive, Updating submodules]
-    - [mkdir $HOME/.functions, Creating zfunctions directory]
