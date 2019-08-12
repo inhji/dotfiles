@@ -24,11 +24,12 @@ prompt pure
 # Load z
 . $DOTFILES/z/z.sh
 
-alias r="source ~/.zshrc"
+alias r="source ~/.zshrc && echo 'Reloading config!'"
 alias up="sudo apt update"
 alias i="sudo apt install"
 alias trz="trezor-agent"
 alias gs="git status"
 alias phx="iex -S mix phx.server"
 
-alias tunnel="trz -v root@tunnel.inhji.de -- ssh -R 1337:localhost:4000 root@tunnel.inhji.de"
+
+alias tunnel="ssh -R 4001:localhost:4000 root@inhji.de"
