@@ -12,6 +12,10 @@ if [[ -d $HOME/.cargo ]]; then
   source $HOME/.cargo/env
 fi
 
+if [[ -d /home/linuxbrew ]]; then
+	eval $(/home/linuxbrew/.linuxbrew/bin/brew shellenv)
+fi
+
 fpath=("$HOME/.zfunctions" $fpath)
 
 autoload -U promptinit; promptinit
@@ -24,9 +28,9 @@ prompt pure
 # Load z
 . $DOTFILES/z/z.sh
 
-# Load dircolors
-eval $( dircolors -b $DOTFILES/config/zsh/dircolors.zsh )
-
 # Load aliases
 . $DOTFILES/config/zsh/aliases.zsh
+
+# Load dircolors
+eval $( dircolors -b $DOTFILES/config/zsh/dircolors.zsh )
 

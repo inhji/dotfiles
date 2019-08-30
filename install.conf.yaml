@@ -1,5 +1,4 @@
 - shell:
-    - [sudo apt install zsh -y, Installing base packages]
     - [git submodule update --init --recursive, Updating submodules]
     - [mkdir -p $HOME/.zfunctions, Creating zfunctions directory]
     - [mkdir -p $HOME/.ssh, Creating SSH directory]
