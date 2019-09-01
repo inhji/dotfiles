@@ -1,10 +1,16 @@
 .dotfiles
 =================
 
+Managed with [Dotbot] [dotbot]
+
 How to install
 -----------------
 
 ```bash
+# install zsh first
+sudo apt install zsh
+
+# do the dance
 git clone https://git.inhji.de/inhji/dotfiles.git .dotfiles
 ~/.dotfiles/install
 chsh -s /usr/bin/zsh
