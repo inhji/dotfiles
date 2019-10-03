@@ -1,0 +1,4 @@
+directory: /media/biggie/Music
+library: ~/.beets/library.db
+import:
+    move: yes

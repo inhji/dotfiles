@@ -27,3 +27,6 @@
     ~/.zfunctions/async:
         path: pure/async.zsh
         force: true
+    ~/.config/beets/config.yaml:
+        path: config/beets/config
+        force: true
